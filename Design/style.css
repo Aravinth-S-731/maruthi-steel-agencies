@@ -20,90 +20,6 @@ body{
     background-position: center;
 }
 
-nav{
-    position: relative;
-    z-index: 10;
-    width: 100svw;
-    padding: 0.4em 1em;
-}
-nav .nav-list{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-nav .logo img{
-    width: 120px;
-    filter: invert(1);
-    transition: 0.5s all;
-}
-nav .logo img:hover{
-    transform: scale(1.05);
-    transition: 0.5s all;
-}
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-    list-style: none;
-    font-size: 14px;
-}
-nav ul li{
-    padding: 10px;
-    border-radius: 5px;
-    opacity: 0.7;
-    transition: 0.5s all;
-}
-nav ul li:hover{
-    transition: 0.5s all;
-    opacity: 1;
-    filter: drop-shadow(1px 1px 2px #000);
-    transform: scale(1.05);
-}
-nav ul li a{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    color: var(--on-primary);
-}
-nav .menu-toggle{
-    display: none;
-    font-size: 22px;
-    color: var(--on-primary);
-}
-
-@media (max-width: 480px) {
-    nav .menu-toggle{
-        padding: 10px;
-        display: block;
-    }
-    .navLinks{
-        position: fixed;
-        width: 230px;
-        top: 0;
-        right: -230px;
-        height: 100%;
-        background-color: var(--primary);
-        transition: 1s ease-in-out all;
-    }
-    .navLinks .close{
-        color: var(--on-primary);
-        font-size: 22px;
-        margin: 20px;
-    }
-    nav ul{
-        flex-direction: column;
-        gap: 5em;
-        align-items: flex-start;
-        margin: 50px 20px;
-        margin-left: 20px;
-        font-size: 18px;
-    }
-    nav ul li i{
-        padding-right: 4px;
-    }
-}
-
 .hero-section{
     padding: 5em;
     display: flex;
@@ -127,6 +43,7 @@ nav .menu-toggle{
     letter-spacing: 2px;
     margin-bottom: 0.3em;
     filter: drop-shadow(1px 1px 10px #000);
+    position: relative;
 }
 .hero-section .text-content h3 {
     font-size: 18px;
@@ -165,6 +82,7 @@ nav .menu-toggle{
     color: var(--on-primary);
     border: 1px solid var(--on-primary);
 }
+
 .hero-img{
     width: 400px;
     position: absolute;
@@ -175,16 +93,101 @@ nav .menu-toggle{
 }
 .hero-img.one{
     box-shadow: 2px 2px 10px #000;
+    animation: zoomIn 2s ease-in 0s;
 }
 .hero-img.two{
     width: 210px;
     top: 55%;
     left: 60%;
     box-shadow: 5px 5px 50px #000;
+    animation: zoomIn 1.5s ease-in 0s;
 }
 .hero-img.three{
     width: 300px;
     top: 70%;
     left: 80%;
     box-shadow: 5px 5px 50px #000;
+    animation: zoomIn 1s ease-in 0s;
+}
+
+@media (max-width: 830px) {
+    .hero-section{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section .text-content .buttons{
+        justify-content: center;
+    }
+    .hero-img{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero-img.two{
+        left: 25%;
+        top: 60%;
+    }
+    .hero-img.three{
+        left: 60%;
+        top: 65%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section{
+        flex-direction: column;
+        text-align: left;
+        padding: 3em 1em;
+    }
+    .hero-section .text-content{
+        width: 320px;
+    }
+    .hero-section .text-content h1{
+        font-size: 32px;
+    }
+    .hero-section .text-content h3{
+        font-size: 12px;
+    }
+    .hero-section .text-content h3 span{
+        font-size: 18px;
+    }
+    .hero-section .text-content .buttons{
+        justify-content: flex-start;
+    }
+    .hero-section .text-content .buttons button{
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+    .hero-img.one{
+        top: 60%;
+        width: 250px;
+    }
+    .hero-img.two{
+        width: 120px;
+        top: 70%;
+        left: 20%;
+    }
+    .hero-img.three{
+        width: 180px;
+        top: 75%;
+        left: 65%;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        width: 0px;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from{
+        left: -500px;
+    }
+    to{
+        left: 0;
+    }
 }
