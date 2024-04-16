@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Navigation</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testing Navigation</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Font API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    
+        <nav>
+            <div class="nav-list">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/Assests/logo.png" alt="LOGO">
+                    </a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fa-solid fa-bars open" onclick="openNav()"></i> <!-- Hamburger Open menu icon -->
+                </div>
+                <div class="navLinks" id="navLinks">
+                    <div class="menu-toggle"><i class="fa-solid fa-multiply close" onclick="closeNav()"></i> <!-- Hamburger Close menu icon -->
+                    </div>
+                    <ul>
+                        <li><a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            Home
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Products
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-circle-info"></i>
+                            About Us
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-phone"></i>
+                            Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="hero-section">
+        <!-- TEXT CONTENT -->
+        <div class="text-content">
+            <h1>MARUTHI <br> STEEL AGENCIES</h1>
+            <h3>
+                <span>“</span>
+                Where strength meets style, discover the perfect rack for your space at Maruthi Steel Agencies.
+                <span>”</span>
+            </h3>
+            <div class="buttons">
+                <a href="#"><button class="Products-link" id="">Products</button></a>
+                <a href="#"><button class="Contact-link" id="">Contact</button></a>
+            </div>
+            </div>
+
+        <!-- IMAGE CONTENT -->
+        <div class="image-content">
+            <img src="/Assests/blue-with-red rack.jpeg" alt="Hero image" class="hero-img one">
+            <img src="/Assests/blue rack.jpeg" alt="Hero image" class="hero-img two">
+            <img src="/Assests/red rack.jpeg" alt="Hero image" class="hero-img three">
+        </div>
+    </div>
+
+    <script>
+        let navLinks = document.getElementById('navLinks');
+        function openNav(){
+            navLinks.style.right = '0px';
+        }
+        function closeNav(){
+            navLinks.style.right = '-230px';
+        }
+    </script>
+
+</body>
+</html>
